@@ -8,9 +8,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/googollee/go-engine.io/base"
-	"github.com/googollee/go-engine.io/payload"
-	"github.com/googollee/go-engine.io/transport"
+	"github.com/talkfun/go-engine.io/base"
+	"github.com/talkfun/go-engine.io/payload"
+	"github.com/talkfun/go-engine.io/transport"
 )
 
 type session struct {
@@ -103,6 +103,7 @@ func (s *session) NextReader() (FrameType, io.ReadCloser, error) {
 				s.Close()
 				return 0, nil, err
 			}
+			//TODO: 构造一个 ping 事件, 2["ping","ping"]
 		case base.CLOSE:
 			r.Close() // unlocks the wrapped connection's FrameReader
 			s.Close()

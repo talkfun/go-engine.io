@@ -6,10 +6,10 @@ import (
 	"log"
 	"time"
 
-	engineio "github.com/googollee/go-engine.io"
-	"github.com/googollee/go-engine.io/transport"
-	"github.com/googollee/go-engine.io/transport/polling"
-	"github.com/googollee/go-engine.io/transport/websocket"
+	engineio "github.com/talkfun/go-engine.io"
+	"github.com/talkfun/go-engine.io/transport"
+	"github.com/talkfun/go-engine.io/transport/polling"
+	"github.com/talkfun/go-engine.io/transport/websocket"
 )
 
 func main() {
