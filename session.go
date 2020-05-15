@@ -103,7 +103,7 @@ func (s *session) NextReader() (FrameType, io.ReadCloser, error) {
 				s.Close()
 				return 0, nil, err
 			}
-			//TODO: 构造一个 ping 事件, 2["ping","ping"]
+			return FrameType(base.FramePing), nil, err
 		case base.CLOSE:
 			r.Close() // unlocks the wrapped connection's FrameReader
 			s.Close()

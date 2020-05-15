@@ -17,6 +17,8 @@ const (
 	TEXT = FrameType(base.FrameString)
 	// BINARY is binary type message.
 	BINARY = FrameType(base.FrameBinary)
+	// PING is ping type message.
+	PING = FrameType(base.FramePing)
 )
 
 // Conn is connection.

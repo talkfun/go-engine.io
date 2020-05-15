@@ -55,6 +55,8 @@ const (
 	FrameString FrameType = iota
 	// FrameBinary identifies a binary frame.
 	FrameBinary
+	// FramePing identifies a ping frame.
+	FramePing
 )
 
 // ByteToFrameType converts a byte to FrameType.
