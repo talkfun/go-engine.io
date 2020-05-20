@@ -1,4 +1,4 @@
-module github.com/googollee/go-engine.io
+module github.com/talkfun/go-engine.io
 
 go 1.12
 
