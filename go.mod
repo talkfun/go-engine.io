@@ -1,4 +1,4 @@
-module github.com/googollee/go-engine.io
+module github.com/talkfun/go-engine.io
 
 require (
 	github.com/golang/lint v0.0.0-20181217174547-8f45f776aaf1 // indirect
