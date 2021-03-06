@@ -90,7 +90,9 @@ func (d *decoder) setNextReader(r byteReader, supportBinary bool) error {
 	d.pt = pt
 	d.rawReader = r
 	d.limitReader.R = r
-	d.limitReader.N = l
+	// hack !!! 因为终端是根据utf字符长度来设置长度信息的，而不是字节长度，所以这里字节长度不准确，会读取不完整。直接将 N 设置为 4096，读取全部数据
+	//d.limitReader.N = l
+	d.limitReader.N = 4096
 	d.supportBinary = supportBinary
 	if !supportBinary && ft == base.FrameBinary {
 		d.b64Reader = base64.NewDecoder(base64.StdEncoding, &d.limitReader)
